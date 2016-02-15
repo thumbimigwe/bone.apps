@@ -1,7 +1,7 @@
-router.configure({
-    layoutTemplate: 'mainLaout'
-});
-router.route('/', {
-    name: 'root',
-    controller: 'mainPageController'
-})
+// router.configure({
+//     layoutTemplate: 'mainLaout'
+// });
+// router.route('/', {
+//     name: 'root',
+//     controller: 'mainPageController'
+// })

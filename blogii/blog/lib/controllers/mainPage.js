@@ -1,4 +1,3 @@
-mainPageController = routeController.extend({
-    layoutTemplate: 'mainLayout',
+mainPageController = baseController.extend({
     template: 'postsList'
 });

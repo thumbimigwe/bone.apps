@@ -1,2 +1,0 @@
-# bone.apps
-nodejs apps

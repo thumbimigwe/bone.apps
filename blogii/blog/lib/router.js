@@ -1,12 +1,31 @@
-router.configure({
-    //     layoutTemplate: 'mainLaout'
-});
-router.route('/', {
-    name: 'root',
-    controller: 'mainPageController'
+Router.configure({
+  loadingTemplate: 'spinner',
+  notFoundTemplate: 'notFound'
 });
 
-router.route('/new', {
-    name: 'newPost',
-    controller: 'baseController'
+Router.route('/', {
+  name: 'root',
+  controller: 'MainPageController'
 });
+
+Router.route('/new', {
+  name: 'newPost',
+  controller: 'BaseController'
+});
+
+Router.route('/:_id', {
+  name: 'singlePost',
+  controller: 'SinglePostController'
+});
+
+Router.onBeforeAction(function() {
+  if (!Meteor.user()) {
+    if (Meteor.loggingIn()) {
+      this.render(this.loadingTemplate);
+    } else {
+      this.render('accessDenied');
+    }
+  } else {
+    this.next();
+  }
+}, {only: 'newPost'});

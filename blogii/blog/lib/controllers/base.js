@@ -1,3 +1,3 @@
-baseController = routeController.extend({
-    layoutTemplate: 'mainLaout'
+BaseController = RouteController.extend({
+  layoutTemplate: 'mainLayout'
 });

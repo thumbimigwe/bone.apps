@@ -1,2 +1,2 @@
 # bone.apps
-nodejs apps
+meteor js blog
